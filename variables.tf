@@ -35,6 +35,10 @@ variable "public_cidrs" {
 
 }
 
+variable "public_subnet_tags" {
+    default = {}
+}
+
 variable "private_cidrs" {
     type = list
 
@@ -44,6 +48,11 @@ variable "private_cidrs" {
     }
 
 }
+
+variable "private_subnet_tags" {
+    default = {}
+}
+
 
 
 variable "database_cidrs" {
@@ -57,6 +66,14 @@ variable "database_cidrs" {
 }
 
 variable "db_subnetgroup_tags" {
+    default = {}
+}
+
+variable "database_subnet_tags" {
+    default = {}
+}
+
+variable "db_subnet_group_tags" {
     default = {}
 }
 
