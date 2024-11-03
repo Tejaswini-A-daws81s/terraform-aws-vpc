@@ -80,7 +80,7 @@ resource "aws_subnet" "database" {
 
 }
 
-
+ # DB subnet group for RDS
 resource "aws_db_subnet_group" "default" {
   name       = local.resource_name
   subnet_ids = aws_subnet.database[*].id
